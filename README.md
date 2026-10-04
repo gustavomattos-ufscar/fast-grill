@@ -7,7 +7,7 @@ e monta cada lanche em uma **pilha** (LIFO), com opção de desfazer o último i
 
 ## Equipe
 - Gustavo Rodrigues Cesar de Mattos — 858177
-- Lucas Nery Nobre — 856527
+- Lucas Soares Nery Nobre — 856527
 - Matheus da Silva Baú — 859432
 
 ## Estado atual
