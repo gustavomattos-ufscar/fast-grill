@@ -16,6 +16,10 @@ Antes de jogar, escolha a dificuldade (**Fácil**, **Médio** ou **Difícil**). 
 | 856527 | Lucas Soares Nery Nobre |
 | 859432 | Mateus da Silva Baú |
 
+## Executáveis prontos (Windows)
+
+O repositório já traz `fast-grill.exe` (jogo com janela) e `fast-grill-texto.exe` (modo texto), compilados para Windows 64 bits. Não precisam de instalação: basta baixar o repositório e abrir o `.exe` com a pasta `assets/` ao lado.
+
 ## Requisitos
 
 - **gcc** e **make**
