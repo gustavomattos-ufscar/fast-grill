@@ -1,0 +1,249 @@
+./tests/teste_fila.exe
+
+== Criacao ==
+  [ OK ]  capacidade 0 e recusada (retorna NULL)
+  [ OK ]  capacidade negativa e recusada
+  [ OK ]  fila_criar(3) devolve uma fila
+  [ OK ]  fila recem-criada esta vazia
+  [ OK ]  fila recem-criada nao esta cheia
+  [ OK ]  tamanho inicial e 0
+
+== Operacoes em fila vazia (underflow) ==
+  [ OK ]  frente falha com a fila vazia
+  [ OK ]  desenfileirar falha com a fila vazia
+  [ OK ]  consultar posicao 0 falha com a fila vazia
+  [ OK ]  tamanho continua 0 apos as falhas
+
+== Ordem FIFO e fila cheia (overflow) ==
+  [ OK ]  enfileira #1
+  [ OK ]  frente e #1
+  [ OK ]  enfileira #2
+  [ OK ]  enfileira #3
+  [ OK ]  com 3 pedidos a fila esta cheia
+  [ OK ]  enfileirar #4 falha (cheia)
+  [ OK ]  tamanho continua 3
+  [ OK ]  frente continua #1 (nao foi sobrescrita)
+  [ OK ]  sai #1 (o primeiro que entrou)
+  [ OK ]  sai #2
+  [ OK ]  sobrou 1 pedido
+
+== Volta do indice circular ==
+  [ OK ]  enfileira #4 (vai para o indice 0)
+  [ OK ]  enfileira #5 (vai para o indice 1)
+  [ OK ]  fila cheia de novo
+  [ OK ]  consultar(0) = #3 (frente)
+  [ OK ]  consultar(1) = #4
+  [ OK ]  consultar(2) = #5 (fim)
+  [ OK ]  consultar(3) falha (posicao nao existe)
+  [ OK ]  consultar(-1) falha
+  [ OK ]  consultar nao altera o tamanho
+  [ OK ]  sai #3
+  [ OK ]  sai #4
+  [ OK ]  desenfileirar aceita NULL (descarta #5)
+  [ OK ]  fila vazia no final
+
+== Muitas voltas (100 entradas e saidas) ==
+  [ OK ]  ordem FIFO mantida em 50 voltas do vetor
+  [ OK ]  fila termina vazia
+  [ OK ]  fila_destruir libera a fila e aceita NULL
+
+teste_fila: 37 de 37 testes passaram -> TUDO CERTO
+
+./tests/teste_pilha.exe
+
+== Criacao ==
+  [ OK ]  capacidade 0 e recusada (retorna NULL)
+  [ OK ]  pilha_criar(3) devolve uma pilha
+  [ OK ]  pilha recem-criada esta vazia
+  [ OK ]  pilha recem-criada nao esta cheia
+  [ OK ]  tamanho inicial e 0
+
+== Operacoes em pilha vazia (underflow) ==
+  [ OK ]  topo falha com a pilha vazia
+  [ OK ]  desempilhar falha com a pilha vazia
+  [ OK ]  consultar(0) falha com a pilha vazia
+
+== Ordem LIFO e pilha cheia (overflow) ==
+  [ OK ]  empilha Pao
+  [ OK ]  topo e Pao
+  [ OK ]  empilha Carne
+  [ OK ]  topo e Carne (o ultimo que entrou)
+  [ OK ]  empilha Queijo
+  [ OK ]  com 3 itens a pilha esta cheia
+  [ OK ]  empilhar Tomate falha (cheia)
+  [ OK ]  topo continua Queijo
+  [ OK ]  tamanho e 3
+
+== Consulta somente leitura (base -> topo) ==
+  [ OK ]  consultar(0) = Pao (base)
+  [ OK ]  consultar(1) = Carne
+  [ OK ]  consultar(2) = Queijo (topo)
+  [ OK ]  consultar(3) falha (posicao nao existe)
+  [ OK ]  consultar nao altera o tamanho
+
+== Desempilhar na ordem inversa ==
+  [ OK ]  sai Queijo (ultimo que entrou)
+  [ OK ]  sai Carne
+  [ OK ]  desempilhar aceita NULL (descarta Pao)
+  [ OK ]  pilha vazia no final
+  [ OK ]  desempilhar de novo falha
+
+== Reuso depois de esvaziar ==
+  [ OK ]  empilha Alface na pilha reaproveitada
+  [ OK ]  tamanho volta a ser 1
+  [ OK ]  topo e Alface
+  [ OK ]  pilha_destruir libera a pilha e aceita NULL
+
+teste_pilha: 31 de 31 testes passaram -> TUDO CERTO
+
+./tests/teste_jogo.exe
+
+== Cardapio e geracao de pedidos (pedido.c) ==
+  [ OK ]  cardapio tem receitas
+  [ OK ]  todas as receitas tem de 3 a 7 ingredientes
+  [ OK ]  indice -1 do cardapio e recusado
+  [ OK ]  indice alem do fim e recusado
+  [ OK ]  200 sorteios com limite 4 nunca passam de 4 ingredientes
+  [ OK ]  [v2] com 5 ingredientes, nunca sai Bacon, Ovo ou Cebola
+  [ OK ]  mesma semente gera a mesma sequencia de pedidos
+  [ OK ]  valor = pontos por ingrediente x tamanho
+  [ OK ]  paciencia = base + por ingrediente x tamanho
+
+== [v2] Ingredientes e receitas por dificuldade ==
+  [ OK ]  a receita X-Bacon existe
+  [ OK ]  X-Bacon NAO esta disponivel com 5 ingredientes (Facil)
+  [ OK ]  X-Bacon esta disponivel com 7 ingredientes (Medio)
+  [ OK ]  a receita Cebolada existe
+  [ OK ]  Cebolada NAO esta disponivel no Medio
+  [ OK ]  Cebolada esta disponivel no Dificil
+  [ OK ]  Medio: 300 sorteios sem nenhuma Cebola
+  [ OK ]  Medio: Bacon/Ovo aparecem nos pedidos
+  [ OK ]  Dificil: Cebola aparece nos pedidos
+  [ OK ]  Facil: empilhar Bacon e recusado
+  [ OK ]  Facil: o prato continua vazio
+  [ OK ]  Medio: empilhar Bacon funciona
+  [ OK ]  Medio: empilhar Cebola e recusado
+  [ OK ]  Dificil: empilhar Cebola funciona
+
+== [v2] Tabela de dificuldades ==
+  [ OK ]  Facil: 5 ingredientes, paciencia 8 + 3/item, 10 pts/item (igual a v1)
+  [ OK ]  Facil: chegada 10->4, receitas ate 4, 5 por nivel, fila 5, sem penalidade (igual a v1)
+  [ OK ]  Facil -> Medio -> Dificil: nenhuma regra fica mais facil (e os pontos sobem)
+  [ OK ]  Dificil: a fila lota com 4
+  [ OK ]  dificuldade invalida usa o Facil
+  [ OK ]  jogo_iniciar guarda a dificuldade e a configuracao
+  [ OK ]  Dificil: primeiro cliente novo em 6 ticks
+  [ OK ]  Dificil: paciencia = 5 + 2 x tamanho
+
+== Inicio da partida (Facil) ==
+  [ OK ]  jogo_iniciar funciona
+  [ OK ]  comeca com 3 vidas
+  [ OK ]  comeca com 0 pontos
+  [ OK ]  comeca com 2 pedidos na fila
+  [ OK ]  comeca com o prato vazio
+  [ OK ]  contador de acertos comeca em 0
+  [ OK ]  relogio da frente comeca com a paciencia cheia do pedido #1
+  [ OK ]  o pedido da frente e o #1
+  [ OK ]  partida nao comeca terminada
+
+== Servir o prato correto ==
+  [ OK ]  acertos == tamanho da receita
+  [ OK ]  servir funciona com o prato igual a receita
+  [ OK ]  ganhou os pontos do pedido (10 por ingrediente)
+  [ OK ]  1 pedido servido
+  [ OK ]  o pedido saiu da fila (sobrou 1)
+  [ OK ]  agora a frente e o pedido #2 (FIFO)
+  [ OK ]  prato e contador zerados para o proximo
+  [ OK ]  o relogio passou a ser o do novo cliente da frente
+  [ OK ]  mensagem avisa que foi servido
+
+== Contador de acertos + desfazer (LIFO) ==
+  [ OK ]  1o ingrediente certo -> acertos = 1
+  [ OK ]  ingrediente errado entra no prato mas acertos continua 1
+  [ OK ]  servir falha com prato errado
+  [ OK ]  mensagem explica que o prato esta errado
+  [ OK ]  servir errado nao muda pontos nem fila
+  [ OK ]  desfazer tira o topo (o errado)
+  [ OK ]  tirar o errado nao muda acertos (continua 1)
+  [ OK ]  desfazer de novo tira o 1o ingrediente
+  [ OK ]  tirar um acerto diminui acertos para 0
+  [ OK ]  desfazer com prato vazio falha
+  [ OK ]  depois de corrigir, servir funciona
+
+== Mesmos ingredientes em ordem errada ==
+  [ OK ]  prato tem o tamanho da receita
+  [ OK ]  acertos = 0 (a base ja esta errada)
+  [ OK ]  servir falha: a ordem importa
+
+== Prato incompleto e prato cheio ==
+  [ OK ]  servir falha com prato incompleto
+  [ OK ]  mensagem diz que faltam ingredientes
+  [ OK ]  prato chega a 7 ingredientes
+  [ OK ]  o 8o ingrediente e recusado (prato cheio)
+  [ OK ]  tamanho continua 7
+
+== Paciencia: cliente da frente desiste ==
+  [ OK ]  1 tick antes do limite o cliente ainda espera
+  [ OK ]  falta 1 de paciencia
+  [ OK ]  perdeu 1 vida
+  [ OK ]  o #1 saiu pela frente; agora a frente e o #2
+  [ OK ]  o prato em montagem foi descartado
+  [ OK ]  o #2 comeca com a paciencia cheia (nao perdeu nada esperando)
+  [ OK ]  mensagem avisa a desistencia
+
+== [v2] Penalidade ao servir errado ==
+  [ OK ]  Facil: servir errado NAO tira paciencia
+  [ OK ]  Medio: servir incompleto tira 2 de paciencia
+  [ OK ]  mensagem avisa a penalidade
+  [ OK ]  Medio: servir prato errado tira 2 de paciencia
+  [ OK ]  Dificil: a penalidade para em 1 (nao zera fora do tick)
+  [ OK ]  a penalidade sozinha nao faz o cliente desistir
+  [ OK ]  no tick seguinte o cliente desiste normalmente
+
+== Sem clientes na fila ==
+  [ OK ]  servindo os 2 iniciais a fila fica vazia
+  [ OK ]  empilhar sem cliente falha
+  [ OK ]  servir sem cliente falha
+  [ OK ]  esperar com a fila vazia nao tira vida
+  [ OK ]  apos o intervalo de chegada, chega 1 cliente
+  [ OK ]  o relogio do novo cliente comeca cheio
+
+== Progressao de nivel ==
+  [ OK ]  nivel inicial: receitas de ate 4 itens
+  [ OK ]  serviu 5 pedidos sem perder vida
+  [ OK ]  subiu para o nivel 1
+  [ OK ]  intervalo de chegada caiu de 10 para 9
+  [ OK ]  agora podem vir receitas de 5 itens
+  [ OK ]  com 30 servidos o intervalo chega ao minimo (4)
+  [ OK ]  receitas de ate 7 itens liberadas
+  [ OK ]  [v2] Dificil: ja comeca com receitas de ate 6 itens
+  [ OK ]  [v2] Dificil: sobe de nivel com apenas 3 servidos
+
+== Fila lotada e fim de partida ==
+  [ OK ]  cliente chegou com a fila cheia (5) e foi embora: -1 vida
+  [ OK ]  mensagem avisa a fila lotada
+  [ OK ]  a fila nunca passou de 5 pedidos
+  [ OK ]  sem vidas a partida termina
+  [ OK ]  vidas = 0 (nunca fica negativo)
+  [ OK ]  3 clientes perdidos = 3 vidas
+  [ OK ]  depois do fim, tick nao avanca
+  [ OK ]  depois do fim, as acoes do jogador sao ignoradas
+  [ OK ]  pontuacao final preservada
+  [ OK ]  jogo_destruir libera e zera os ponteiros
+  [ OK ]  [v2] Dificil: cliente chegou com 4 na fila e foi embora
+  [ OK ]  [v2] Dificil: a fila nunca passou de 4 pedidos
+
+== [v2] Eventos (usados pelos efeitos sonoros) ==
+  [ OK ]  a partida comeca sem eventos pendentes
+  [ OK ]  empilhar marca 'empilhou'
+  [ OK ]  jogo_limpar_eventos zera tudo
+  [ OK ]  desfazer marca 'desfez'
+  [ OK ]  servir errado marca 'errou'
+  [ OK ]  servir certo marca 'serviu'
+  [ OK ]  chegada de cliente marca 'cliente_chegou'
+  [ OK ]  desistencia marca 'perdeu_vida'
+  [ OK ]  subir de nivel marca 'subiu_nivel'
+  [ OK ]  fim da partida marca 'terminou'
+
+teste_jogo: 119 de 119 testes passaram -> TUDO CERTO
+

@@ -1,0 +1,115 @@
+=== FAST GRILL (modo texto) ===  semente 42 | dificuldade Dificil
+
+Comandos:
+  1 Pao | 2 Carne | 3 Queijo | 4 Alface | 5 Tomate | 6 Bacon | 7 Ovo | 8 Cebola | -> empilha no prato
+  d desfaz (tira o topo) | s serve | t passa 1 tick | t N passa N ticks
+  a ajuda | q sai
+
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 2 de 4:
+  #1   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 11/11
+  #2   Pao com Ovo     [Pao > Ovo > Pao]
+PRATO (base -> topo): (vazio)   [0 de 3 certos]
+>> Monte o lanche do cliente da frente!
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 2 de 4:
+  #1   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 11/11
+  #2   Pao com Ovo     [Pao > Ovo > Pao]
+PRATO (base -> topo): Pao   [1 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 2 de 4:
+  #1   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 11/11
+  #2   Pao com Ovo     [Pao > Ovo > Pao]
+PRATO (base -> topo): Pao > Ovo   [2 de 3 certos]
+>> Ovo no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 2 de 4:
+  #1   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+  #2   Pao com Ovo     [Pao > Ovo > Pao]
+PRATO (base -> topo): Pao > Ovo   [2 de 3 certos]
+>> Ainda faltam 1 ingrediente(s)! Cliente impaciente (-3).
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 2 de 4:
+  #1   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+  #2   Pao com Ovo     [Pao > Ovo > Pao]
+PRATO (base -> topo): Pao > Ovo > Pao   [3 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 11/11
+PRATO (base -> topo): (vazio)   [0 de 3 certos]
+>> Pedido #1 servido! +60 pontos
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): (vazio)   [0 de 3 certos]
+>> Pedido #1 servido! +60 pontos
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): Pao   [1 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): Pao > Carne   [1 de 3 certos]
+>> Carne no prato.
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): Pao > Carne > Queijo   [1 de 3 certos]
+>> Queijo no prato.
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): Pao > Carne > Queijo > Alface   [1 de 3 certos]
+>> Alface no prato.
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 8/11
+PRATO (base -> topo): Pao > Carne > Queijo > Alface > Pao   [1 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 3 | Vidas 3 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 3 tick(s)
+FILA (frente -> fim), 1 de 4:
+  #2   Pao com Ovo     [Pao > Ovo > Pao]  <- FRENTE, paciencia 5/11
+PRATO (base -> topo): Pao > Carne > Queijo > Alface > Pao   [1 de 3 certos]
+>> Prato errado! Cliente impaciente (-3). Desfaca ate o erro.
+> 
+------------------------------------------------------------------
+Tick 36 | Vidas 0 | Pontos 60 | Servidos 1 | Nivel 1 | Proximo cliente em 6 tick(s)
+FILA (frente -> fim), 4 de 4:
+  #4   X-Salada        [Pao > Carne > Queijo > Alface > Pao]  <- FRENTE, paciencia 2/15
+  #5   Hamburguer      [Pao > Carne > Pao]
+  #6   X-Salada        [Pao > Carne > Queijo > Alface > Pao]
+  #7   X-Bacon Egg     [Pao > Carne > Bacon > Ovo > Queijo > Pao]
+PRATO (base -> topo): (vazio)   [0 de 5 certos]
+>> Fila lotada! Cliente #8 foi embora (-1 vida)
+
+=== FIM DE JOGO ===
+Pontuacao final: 60 | Pedidos servidos: 1 | Clientes perdidos: 3

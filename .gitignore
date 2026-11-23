@@ -1,0 +1,9 @@
+# executaveis gerados pelo make
+*.exe
+fast-grill
+fast-grill-texto
+tests/teste_fila
+tests/teste_pilha
+tests/teste_jogo
+# capturas soltas (as oficiais ficam em docs/)
+/captura_*.png

@@ -1,0 +1,123 @@
+=== FAST GRILL (modo texto) ===  semente 42 | dificuldade Facil
+
+Comandos:
+  1 Pao | 2 Carne | 3 Queijo | 4 Alface | 5 Tomate | -> empilha no prato
+  d desfaz (tira o topo) | s serve | t passa 1 tick | t N passa N ticks
+  a ajuda | q sai
+
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): (vazio)   [0 de 3 certos]
+>> Monte o lanche do cliente da frente!
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao   [1 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao > Queijo   [2 de 3 certos]
+>> Queijo no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao > Queijo > Alface   [2 de 3 certos]
+>> Alface no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao > Queijo > Alface   [2 de 3 certos]
+>> Prato errado! Desfaca ate o erro e monte de novo.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao > Queijo   [2 de 3 certos]
+>> Alface retirado do prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 0 | Servidos 0 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 2 de 5:
+  #1   Pao com Queijo  [Pao > Queijo > Pao]  <- FRENTE, paciencia 17/17
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]
+PRATO (base -> topo): Pao > Queijo > Pao   [3 de 3 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 30 | Servidos 1 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+PRATO (base -> topo): (vazio)   [0 de 4 certos]
+>> Pedido #1 servido! +30 pontos
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 30 | Servidos 1 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+PRATO (base -> topo): Pao   [1 de 4 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 30 | Servidos 1 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+PRATO (base -> topo): Pao > Carne   [2 de 4 certos]
+>> Carne no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 30 | Servidos 1 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+PRATO (base -> topo): Pao > Carne > Tomate   [3 de 4 certos]
+>> Tomate no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 30 | Servidos 1 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #2   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+PRATO (base -> topo): Pao > Carne > Tomate > Pao   [4 de 4 certos]
+>> Pao no prato.
+> 
+------------------------------------------------------------------
+Tick 0 | Vidas 3 | Pontos 70 | Servidos 2 | Nivel 1 | Proximo cliente em 10 tick(s)
+FILA (frente -> fim), 0 de 5:
+  (vazia)
+PRATO (base -> topo): (vazio)
+>> Pedido #2 servido! +40 pontos
+> 
+------------------------------------------------------------------
+Tick 12 | Vidas 3 | Pontos 70 | Servidos 2 | Nivel 1 | Proximo cliente em 8 tick(s)
+FILA (frente -> fim), 1 de 5:
+  #3   Natural         [Pao > Alface > Tomate > Pao]  <- FRENTE, paciencia 18/20
+PRATO (base -> topo): (vazio)   [0 de 4 certos]
+>> Pedido #2 servido! +40 pontos
+> 
+------------------------------------------------------------------
+Tick 64 | Vidas 0 | Pontos 70 | Servidos 2 | Nivel 1 | Proximo cliente em 7 tick(s)
+FILA (frente -> fim), 3 de 5:
+  #6   X-Tomate        [Pao > Carne > Tomate > Pao]  <- FRENTE, paciencia 20/20
+  #7   Cheeseburguer   [Pao > Carne > Queijo > Pao]
+  #8   Hamburguer      [Pao > Carne > Pao]
+PRATO (base -> topo): (vazio)   [0 de 4 certos]
+>> Cliente #5 cansou de esperar e foi embora (-1 vida)
+
+=== FIM DE JOGO ===
+Pontuacao final: 70 | Pedidos servidos: 2 | Clientes perdidos: 3
